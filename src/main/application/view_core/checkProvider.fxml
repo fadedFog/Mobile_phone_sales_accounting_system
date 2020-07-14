@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.application.Controller">
+   <children>
+      <Button fx:id="closeAdding" layoutX="14.0" layoutY="362.0" mnemonicParsing="false" onAction="#closeAddingWindow" prefHeight="27.0" prefWidth="64.0" text="Назад" />
+      <Label layoutX="15.0" layoutY="65.0" text="Код:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="99.0" text="Наименование:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="130.0" text="ИНН:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="164.0" text="КПП:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="200.0" text="Адрес:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="240.0" text="Телефон:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="292.0" layoutY="99.0" text="Расчетный счет:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="292.0" layoutY="130.0" text="Банк:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="292.0" layoutY="164.0" text="БИК:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="292.0" layoutY="240.0" text="Кореспондентский счет:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="codeCheckProvider" editable="false" layoutX="119.0" layoutY="62.0" />
+      <TextField fx:id="nameCheckProvider" editable="false" layoutX="119.0" layoutY="96.0" />
+      <TextField fx:id="innCheckProvider" editable="false" layoutX="119.0" layoutY="127.0" />
+      <TextField fx:id="cppCheckProvider" editable="false" layoutX="119.0" layoutY="161.0" />
+      <TextField fx:id="addressCheckProvider" editable="false" layoutX="119.0" layoutY="197.0" prefHeight="25.0" prefWidth="472.0" />
+      <TextField fx:id="numberPhoneCheckProvider" editable="false" layoutX="119.0" layoutY="237.0" />
+      <TextField fx:id="correspondentAccountCheckProvider" editable="false" layoutX="443.0" layoutY="237.0" />
+      <TextField fx:id="bikCheckProvider" editable="false" layoutX="443.0" layoutY="161.0" />
+      <TextField fx:id="bankCheckProvider" layoutX="443.0" layoutY="127.0" />
+      <TextField fx:id="paymentAccountCheckProvider" editable="false" layoutX="443.0" layoutY="96.0" />
+      <Button fx:id="buttonClose" layoutX="557.0" layoutY="23.0" mnemonicParsing="false" onAction="#closeSimpleWindow" onMouseEntered="#changeColorButtonToRed" onMouseExited="#changeColorButtonToGray" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #CDC9C9;" text="х" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#619cd7" height="21.0" layoutX="-11.0" layoutY="-10.0" stroke="#0074cd" strokeType="INSIDE" width="627.0" />
+      <Label layoutX="15.0" layoutY="6.0" prefHeight="19.0" prefWidth="226.0" style="-fx-background-color: #619cd7;" text="Данные об поаствщике " textFill="#464646">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Line endX="241.0" endY="-84.0" layoutX="364.0" layoutY="84.0" startX="241.0" startY="313.0" stroke="#619cd7" strokeWidth="5.0" />
+      <Line endX="137.0" endY="-112.0" layoutX="-135.0" layoutY="112.0" startX="137.0" startY="285.0" stroke="#619cd7" strokeWidth="5.0" />
+      <Line endX="445.5" endY="262.0" layoutX="157.0" layoutY="135.0" startX="-157.0" startY="262.0" stroke="#619cd7" strokeWidth="5.0" />
+      <Label fx:id="labelCodeProvider" layoutX="173.0" layoutY="7.0" prefHeight="17.0" prefWidth="64.0">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

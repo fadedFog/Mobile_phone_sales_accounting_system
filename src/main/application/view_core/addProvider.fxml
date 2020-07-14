@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.application.Controller">
+   <children>
+      <Rectangle fx:id="statusCodeProvider" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="30.0" layoutX="118.0" layoutY="60.0" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="150.0" />
+      <Rectangle fx:id="statusNameProvider" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="30.0" layoutX="118.0" layoutY="94.0" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="150.0" />
+      <Rectangle fx:id="statusINNProvider" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="30.0" layoutX="118.0" layoutY="125.0" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="150.0" />
+      <Rectangle fx:id="statusCPPProvider" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="30.0" layoutX="118.0" layoutY="159.0" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="150.0" />
+      <Rectangle fx:id="statusAddressProvider" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="30.0" layoutX="118.0" layoutY="195.0" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="150.0" />
+      <Rectangle fx:id="statusNPhoneProvider" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="30.0" layoutX="118.0" layoutY="235.0" onKeyReleased="#returnStatusPhoneProvider" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="150.0" />
+      <Rectangle fx:id="statusPAccProvider" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="30.0" layoutX="442.0" layoutY="125.0" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="150.0" />
+      <Rectangle fx:id="statusBankProvider" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="30.0" layoutX="442.0" layoutY="159.0" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="150.0" />
+      <Rectangle fx:id="statusBIKProvider" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="30.0" layoutX="442.0" layoutY="195.0" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="150.0" />
+      <Rectangle fx:id="statusCAccProvider" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="30.0" layoutX="442.0" layoutY="235.0" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="150.0" />
+      <Label layoutX="113.0" layoutY="119.0" text="9">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <Button fx:id="addingProvider" layoutX="504.0" layoutY="362.0" mnemonicParsing="false" onAction="#addObjectProvider" prefHeight="27.0" prefWidth="88.0" text="Добавить" />
+      <Button fx:id="closeAdding" layoutX="14.0" layoutY="362.0" mnemonicParsing="false" onAction="#closeAddingWindow" prefHeight="27.0" prefWidth="64.0" text="Назад" />
+      <Label layoutX="15.0" layoutY="65.0" text="Код:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="99.0" text="Наименование:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="130.0" text="ИНН:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="164.0" text="КПП:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="200.0" text="Адрес:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="240.0" text="Телефон:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="293.0" layoutY="130.0" text="Расчетный счет:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="293.0" layoutY="164.0" text="Банк:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="293.0" layoutY="200.0" text="БИК:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="292.0" layoutY="240.0" text="Кореспондентский счет:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="codeAddProvider" layoutX="119.0" layoutY="62.0" onKeyReleased="#returnStatusCodeProvider" />
+      <TextField fx:id="nameAddProvider" layoutX="119.0" layoutY="96.0" onKeyReleased="#returnStatusNameProvider" />
+      <TextField fx:id="innAddProvider" layoutX="119.0" layoutY="127.0" onKeyReleased="#returnStatusINNProvider" promptText="999999999" />
+      <TextField fx:id="cppAddProvider" layoutX="119.0" layoutY="161.0" onKeyReleased="#returnStatusCPPProvider" promptText="9999999999" />
+      <TextField fx:id="addressAddProvider" layoutX="119.0" layoutY="197.0" onKeyReleased="#returnStatusAddressProvider" />
+      <TextField fx:id="numberPhoneAddProvider" layoutX="119.0" layoutY="237.0" onKeyReleased="#returnStatusPhoneProvider" promptText="9-999-999-99-99" />
+      <TextField fx:id="correspondentAccountAddProvider" layoutX="443.0" layoutY="237.0" onKeyReleased="#returnStatusCAccProvider" promptText="99999999999999999999" />
+      <TextField fx:id="bikAddProvider" layoutX="443.0" layoutY="197.0" onKeyReleased="#returnStatusBIKProvider" promptText="999999999" />
+      <TextField fx:id="bankAddProvider" layoutX="443.0" layoutY="161.0" onKeyReleased="#returnStatusBankProvider" />
+      <TextField fx:id="paymentAccountAddProvider" layoutX="443.0" layoutY="127.0" onKeyReleased="#returnStatusPAccProvider" promptText="99999999999" />
+      <Button fx:id="buttonClose" layoutX="557.0" layoutY="23.0" mnemonicParsing="false" onAction="#closeSimpleWindow" onMouseEntered="#changeColorButtonToRed" onMouseExited="#changeColorButtonToGray" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #CDC9C9;" text="х" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#619cd7" height="21.0" layoutX="-11.0" layoutY="-10.0" stroke="#0074cd" strokeType="INSIDE" width="627.0" />
+      <Label layoutX="15.0" layoutY="6.0" style="-fx-background-color: #619cd7;" text="Добавдение нового поставщика" textFill="#464646">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Line endX="241.0" endY="-84.0" layoutX="364.0" layoutY="84.0" startX="241.0" startY="313.0" stroke="#619cd7" strokeWidth="5.0" />
+      <Line endX="137.0" endY="-112.0" layoutX="-135.0" layoutY="112.0" startX="137.0" startY="285.0" stroke="#619cd7" strokeWidth="5.0" />
+      <Line endX="445.5" endY="262.0" layoutX="157.0" layoutY="135.0" startX="-157.0" startY="262.0" stroke="#619cd7" strokeWidth="5.0" />
+      <Label layoutX="435.0" layoutY="228.0" text="20">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <Label layoutX="437.0" layoutY="190.0" text="9">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <Label layoutX="435.0" layoutY="119.0" text="11">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="154.0" text="10">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

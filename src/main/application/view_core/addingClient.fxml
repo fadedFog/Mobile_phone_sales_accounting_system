@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="371.0" prefWidth="428.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.application.Controller">
+   <children>
+      <Rectangle fx:id="statusCodeClient" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="30.0" layoutX="127.0" layoutY="37.0" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="66.0" />
+      <Rectangle fx:id="statusSNameClient" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="32.0" layoutX="127.0" layoutY="71.0" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="151.0" />
+      <Rectangle fx:id="statusNameClient" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="32.0" layoutX="127.0" layoutY="103.0" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="151.0" />
+      <Rectangle fx:id="statusMNameClient" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="32.0" layoutX="127.0" layoutY="136.0" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="151.0" />
+      <Rectangle fx:id="statusPhoneClient" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="32.0" layoutX="127.0" layoutY="176.0" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="151.0" />
+      <Rectangle fx:id="statusAddressClient" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="34.0" layoutX="127.0" layoutY="239.0" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="243.0" />
+      <Button fx:id="addingOrder" layoutX="320.0" layoutY="316.0" mnemonicParsing="false" onAction="#addObjectClient" prefHeight="27.0" prefWidth="88.0" text="Добавить" />
+      <Button fx:id="closeAdding" layoutX="15.0" layoutY="316.0" mnemonicParsing="false" onAction="#closeAddingWindow" prefHeight="27.0" prefWidth="64.0" text="Назад" />
+      <Button fx:id="buttonClose" layoutX="380.0" layoutY="21.0" mnemonicParsing="false" onAction="#closeSimpleWindow" onMouseEntered="#changeColorButtonToRed" onMouseExited="#changeColorButtonToGray" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #CDC9C9;" text="х" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#619cd7" height="21.0" layoutX="-11.0" layoutY="-10.0" stroke="#0074cd" strokeType="INSIDE" width="447.0" />
+      <Label layoutX="15.0" layoutY="6.0" style="-fx-background-color: #619cd7;" text="Добавление нового клиента" textFill="#464646">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Line endX="241.0" endY="-84.0" layoutX="185.0" layoutY="84.0" startX="241.0" startY="286.5" stroke="#619cd7" strokeWidth="5.0" />
+      <Line endX="137.0" endY="-112.0" layoutX="-135.0" layoutY="112.0" startX="137.0" startY="258.5" stroke="#619cd7" strokeWidth="5.0" />
+      <Line endX="270.5" endY="262.0" layoutX="158.0" layoutY="108.0" startX="-157.0" startY="262.0" stroke="#619cd7" strokeWidth="5.0" />
+      <Label layoutX="15.0" layoutY="43.0" text="Код клиента:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="77.0" text="Фамилия:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="109.0" text="Имя:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="142.0" text="Отчетсво:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="182.0" text="Номер телефона:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="214.0" text="Email:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="246.0" text="Адрес:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="numberPhoneAddClient" layoutX="128.0" layoutY="179.0" onKeyReleased="#returnStatusPhoneClient" />
+      <TextField fx:id="codeAddClient" layoutX="128.0" layoutY="40.0" onKeyReleased="#returnStatusCodeClient" prefHeight="25.0" prefWidth="64.0" />
+      <TextField fx:id="secondNameAddClient" layoutX="128.0" layoutY="74.0" onKeyReleased="#returnStatusSNameClient" />
+      <TextField fx:id="nameAddClient" layoutX="128.0" layoutY="106.0" onKeyReleased="#returnStatusNameClient" />
+      <TextField fx:id="middleNameAddClient" layoutX="128.0" layoutY="139.0" onKeyReleased="#returnStatusMNameClient" />
+      <TextField fx:id="emailAddClient" layoutX="128.0" layoutY="211.0" />
+      <TextField fx:id="addressAddClient" layoutX="128.0" layoutY="243.0" onKeyReleased="#returnStatusAddressClient" prefHeight="25.0" prefWidth="241.0" />
+   </children>
+</Pane>

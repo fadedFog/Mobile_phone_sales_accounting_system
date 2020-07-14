@@ -1,0 +1,4 @@
+# Mobile_phone_sales_accounting_system
+ This project is my thesis, the Commission liked the project-5. The project is a database designed to record sales of cell phones in the store. It stores, adds, and deletes entries in the database, and creates Excel reports using Appache POI. Graphical interface in jfxml. Everything works, but you can still add a lot of things to the project and improve it.  Language-Russian.
+
+And here's another thing-I used the database using Java classes, the connections are all set between them correctly. Yes, you could use SQL, but I wanted to put the full force of my knowledge of the language:DD

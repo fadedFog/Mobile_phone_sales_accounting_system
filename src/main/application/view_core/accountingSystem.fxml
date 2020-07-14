@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.application.Controller">
+   <children>
+      <TabPane layoutX="-1.0" layoutY="62.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Поставки">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="571.0" prefWidth="993.0">
+                     <children>
+                        <TableView fx:id="tableDelivery" layoutX="1.0" layoutY="189.0" prefHeight="382.0" prefWidth="900.0">
+                           <columns>
+                              <TableColumn fx:id="numberDelivery" prefWidth="108.0" resizable="false" text="Номер" />
+                              <TableColumn fx:id="dateDelivery" minWidth="64.0" prefWidth="68.0" resizable="false" sortType="DESCENDING" text="Дата" />
+                              <TableColumn fx:id="providerDelivery" prefWidth="265.0" resizable="false" text="Поставщик" />
+                              <TableColumn fx:id="workerDelivery" prefWidth="289.0" resizable="false" text="Сотрудник" />
+                              <TableColumn fx:id="amountDelivery" prefWidth="155.0" resizable="false" text="Сумма" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#addNewDelivery" text="Добавить" />
+                        <Button layoutX="737.0" layoutY="149.0" mnemonicParsing="false" onAction="#deleteRowDelivery" text="Удалить" />
+                        <Button layoutX="93.0" layoutY="149.0" mnemonicParsing="false" onAction="#saveDataDelivery" text="Сохранить" />
+                        <Button layoutX="182.0" layoutY="149.0" mnemonicParsing="false" onAction="#getDataOneDelivery" text="Подробно" />
+                        <TextField fx:id="searchKeyDelivery" layoutX="373.0" layoutY="149.0" prefHeight="25.0" prefWidth="53.0" />
+                        <Label layoutX="270.0" layoutY="152.0" text="Номер постаки:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="435.0" layoutY="149.0" mnemonicParsing="false" onAction="#searchDelivery" text="Найти" />
+                        <Button layoutX="14.0" layoutY="109.0" mnemonicParsing="false" onAction="#openTablePartDelivery" prefHeight="25.0" prefWidth="112.0" text="Табличная часть" />
+                        <Button layoutX="142.0" layoutY="109.0" mnemonicParsing="false" onAction="#generatedReportDelivery" text="Отчёт" />
+                        <Label fx:id="labelCreateReportDelivery" alignment="CENTER" cache="true" contentDisplay="CENTER" layoutX="201.0" layoutY="106.0" onMouseClicked="#openReportsFile" onMouseEntered="#reloadNumberOpacityDelivery" opacity="0.0" prefHeight="31.0" prefWidth="87.0" style="-fx-background-color: #d1e9ff;" text="Отчёт сделан" textAlignment="CENTER" />
+                        <Label fx:id="mustCloseExcelFirst" layoutX="135.0" layoutY="67.0" opacity="0.0" prefHeight="39.0" prefWidth="95.0" text="Закройте Excel документ" textAlignment="CENTER" textFill="RED" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Товары">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="571.0" prefWidth="1229.0">
+                     <children>
+                        <TableView fx:id="tableProducts" layoutY="189.0" prefHeight="382.0" prefWidth="902.0">
+                           <columns>
+                              <TableColumn fx:id="articleProduct" prefWidth="73.0" resizable="false" text="Артикул" />
+                              <TableColumn fx:id="nameProduct" prefWidth="162.0" resizable="false" text="Наименование" />
+                              <TableColumn fx:id="priceProduct" prefWidth="73.0" resizable="false" text="Цена" />
+                              <TableColumn fx:id="classProduct" prefWidth="73.0" resizable="false" text="Класс" />
+                              <TableColumn fx:id="typeCorpusProduct" prefWidth="99.0" resizable="false" text="Тип корпуса" />
+                              <TableColumn fx:id="simProduct" prefWidth="51.0" resizable="false" text="SIM" />
+                              <TableColumn fx:id="osProduct" prefWidth="99.0" resizable="false" text="ОС" />
+                              <TableColumn fx:id="displayProduct" prefWidth="78.0" resizable="false" text="Дисплей" />
+                              <TableColumn fx:id="configProduct" prefWidth="116.0" resizable="false" text="Конфигурация" />
+                              <TableColumn fx:id="cameraProduct" prefWidth="75.0" resizable="false" text="Камера" />
+                              <TableColumn fx:id="multyProduct" prefWidth="105.0" resizable="false" text="Мультимедиа" />
+                              <TableColumn fx:id="corpusProduct" prefWidth="75.0" resizable="false" text="Корпус" />
+                              <TableColumn fx:id="countryProduct" prefWidth="134.0" resizable="false" text="Сделано в:" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#addNewProduct" text="Добавить" />
+                        <Button layoutX="737.0" layoutY="149.0" mnemonicParsing="false" onAction="#deleteRowProduct" text="Удалить" />
+                        <Button layoutX="93.0" layoutY="149.0" mnemonicParsing="false" onAction="#saveDataProduct" text="Сохранить" />
+                        <Button layoutX="182.0" layoutY="149.0" mnemonicParsing="false" onAction="#getDataOneCellPhone" text="Подробно" />
+                        <TextField fx:id="searchArticleProduct" layoutX="377.0" layoutY="149.0" prefHeight="25.0" prefWidth="53.0" />
+                        <Label layoutX="270.0" layoutY="152.0" text="Артикуль товара:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="439.0" layoutY="149.0" mnemonicParsing="false" onAction="#searchProduct" text="Найти" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Сотрудники">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableWorkers" layoutY="189.0" prefHeight="382.0" prefWidth="902.0">
+                           <columns>
+                              <TableColumn fx:id="numberWorker" prefWidth="120.0" resizable="false" text="Табельный номер" />
+                              <TableColumn fx:id="sNameWorker" prefWidth="156.0" resizable="false" text="Фамилия" />
+                              <TableColumn fx:id="nameWorker" prefWidth="148.0" resizable="false" text="Имя" />
+                              <TableColumn fx:id="mNameWorker" prefWidth="145.0" resizable="false" text="Отчество" />
+                              <TableColumn fx:id="positionWorker" prefWidth="156.0" resizable="false" text="Должность" />
+                              <TableColumn fx:id="numberPhoneWorker" prefWidth="175.0" resizable="false" text="Номер телефона" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#addNewWorker" text="Добавить" />
+                        <Button layoutX="737.0" layoutY="149.0" mnemonicParsing="false" onAction="#deleteRowWorker" text="Удалить" />
+                        <Button layoutX="93.0" layoutY="149.0" mnemonicParsing="false" onAction="#saveDataWorker" text="Сохранить" />
+                        <Button layoutX="182.0" layoutY="149.0" mnemonicParsing="false" onAction="#getDataOneWorker" text="Подробно" />
+                        <TextField fx:id="searchNumberWorker" layoutX="390.0" layoutY="149.0" prefHeight="25.0" prefWidth="53.0" />
+                        <Label layoutX="270.0" layoutY="152.0" text="Номер сотрудника:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="452.0" layoutY="149.0" mnemonicParsing="false" onAction="#searchWorker" text="Найти" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Поставщики">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="571.0" prefWidth="900.0">
+                     <children>
+                        <TableView fx:id="tableProviders" layoutY="189.0" prefHeight="382.0" prefWidth="902.0">
+                           <columns>
+                              <TableColumn fx:id="codeProvider" prefWidth="69.0" resizable="false" text="Код" />
+                              <TableColumn fx:id="nameProvider" prefWidth="129.0" resizable="false" text="Наименование" />
+                              <TableColumn fx:id="innProvider" minWidth="0.0" prefWidth="135.0" resizable="false" text="ИНН" />
+                              <TableColumn fx:id="cppProvider" prefWidth="121.0" resizable="false" text="КПП" />
+                              <TableColumn fx:id="addressProvider" prefWidth="210.0" resizable="false" text="Адрес" />
+                              <TableColumn fx:id="numberPhoneProvider" prefWidth="174.0" resizable="false" text="Номер телефона" />
+                              <TableColumn fx:id="paymentAccountProvider" prefWidth="205.0" resizable="false" text="Расчетный счет" />
+                              <TableColumn fx:id="bankProvider" prefWidth="194.0" resizable="false" text="Банк" />
+                              <TableColumn fx:id="bikProvider" prefWidth="148.0" resizable="false" text="БИК" />
+                              <TableColumn fx:id="correspondentAccountProvider" prefWidth="295.0" resizable="false" text="Кореспондентский счет" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#addNewProvider" text="Добавить" />
+                        <Button layoutX="737.0" layoutY="149.0" mnemonicParsing="false" onAction="#deleteRowProvider" text="Удалить" />
+                        <Button layoutX="93.0" layoutY="149.0" mnemonicParsing="false" onAction="#saveDataProvider" text="Сохранить" />
+                        <Button layoutX="182.0" layoutY="149.0" mnemonicParsing="false" onAction="#getDataOneProvider" text="Подробно" />
+                        <TextField fx:id="searchNumberProvider" layoutX="376.0" layoutY="149.0" prefHeight="25.0" prefWidth="53.0" />
+                        <Label layoutX="270.0" layoutY="152.0" text="Код поставщика:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="440.0" layoutY="149.0" mnemonicParsing="false" onAction="#searchProvider" text="Найти" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Клиенты">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableClients" layoutY="189.0" prefHeight="382.0" prefWidth="902.0">
+                           <columns>
+                              <TableColumn fx:id="codeClient" prefWidth="69.0" resizable="false" text="Код" />
+                              <TableColumn fx:id="secondNameClient" prefWidth="130.0" resizable="false" text="Фамилия" />
+                              <TableColumn fx:id="nameClient" minWidth="0.0" prefWidth="135.0" resizable="false" text="Имя" />
+                              <TableColumn fx:id="middleNameClient" prefWidth="120.0" resizable="false" text="Отчество" />
+                              <TableColumn fx:id="numberPhoneClient" prefWidth="120.0" resizable="false" text="Номер телефона" />
+                              <TableColumn fx:id="emailClient" prefWidth="150.0" resizable="false" text="Email" />
+                              <TableColumn fx:id="addressClient" prefWidth="200.0" resizable="false" text="Адрес" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#addNewClient" text="Создать клиента" />
+                        <Button layoutX="737.0" layoutY="149.0" mnemonicParsing="false" onAction="#deleteRowClient" text="Удалить" />
+                        <Button layoutX="126.0" layoutY="149.0" mnemonicParsing="false" onAction="#saveDataClient" text="Сохранить" />
+                        <Button layoutX="214.0" layoutY="149.0" mnemonicParsing="false" onAction="#getDataOneClient" text="Подробно" />
+                        <TextField fx:id="searchCodeClient" layoutX="399.0" layoutY="149.0" prefHeight="25.0" prefWidth="53.0" />
+                        <Label layoutX="312.0" layoutY="152.0" text="Код клиента:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="466.0" layoutY="149.0" mnemonicParsing="false" onAction="#searchClient" text="Найти" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Продажи">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableSales" layoutX="1.0" layoutY="189.0" prefHeight="382.0" prefWidth="900.0">
+                          <columns>
+                            <TableColumn fx:id="codeSale" prefWidth="142.0" text="Код" />
+                            <TableColumn fx:id="codeWorkerSale" prefWidth="294.0" text="Код сотрудника" />
+                              <TableColumn fx:id="codeClientSale" prefWidth="269.0" text="Код клиента" />
+                              <TableColumn fx:id="dateSale" prefWidth="180.0" text="Дата продажи" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#addNewSale" text="Добавить продажу" />
+                        <Button layoutX="146.0" layoutY="149.0" mnemonicParsing="false" onAction="#saveDataSale" text="Сохранить" />
+                        <Button layoutX="234.0" layoutY="149.0" mnemonicParsing="false" onAction="#getDataOneSale" text="Подробно" />
+                        <Button layoutX="737.0" layoutY="149.0" mnemonicParsing="false" onAction="#deleteRowSale" text="Удалить" />
+                        <Button layoutX="486.0" layoutY="149.0" mnemonicParsing="false" onAction="#searchSale" text="Найти" />
+                        <Label layoutX="324.0" layoutY="152.0" text="Код продажи:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="searchCodeSale" layoutX="410.0" layoutY="149.0" prefHeight="25.0" prefWidth="62.0" />
+                        <Button layoutX="14.0" layoutY="106.0" mnemonicParsing="false" onAction="#openTablePartSellProducts" prefHeight="25.0" prefWidth="112.0" text="Табличная часть" />
+                        <Button layoutX="147.0" layoutY="106.0" mnemonicParsing="false" onAction="#generatedReportSales" text="Отчёт" />
+                        <Label fx:id="mustCloseExcelSecond" layoutX="124.0" layoutY="61.0" opacity="0.0" prefHeight="39.0" prefWidth="95.0" text="Закройте Excel документ" textAlignment="CENTER" textFill="RED" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelCreateReportSales" alignment="CENTER" cache="true" contentDisplay="CENTER" layoutX="201.0" layoutY="103.0" onMouseClicked="#openReportsFile" onMouseEntered="#reloadNumberOpacitySales" opacity="0.0" prefHeight="31.0" prefWidth="87.0" style="-fx-background-color: #d1e9ff;" text="Отчёт сделан" textAlignment="CENTER" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button fx:id="buttonClose" layoutX="853.0" layoutY="23.0" mnemonicParsing="false" onAction="#closeAccountingSystem" onMouseEntered="#changeColorButtonToRed" onMouseExited="#changeColorButtonToGray" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #CDC9C9;" text="х" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7cdd79" height="21.0" layoutX="-5.0" layoutY="-10.0" stroke="#25e403" strokeType="INSIDE" width="907.0" />
+      <Label layoutX="15.0" layoutY="6.0" style="-fx-background-color: #7cdd79;" text="Система учета продаж" textFill="#5e5e5e">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

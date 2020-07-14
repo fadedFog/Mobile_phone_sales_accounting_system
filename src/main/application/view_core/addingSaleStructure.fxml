@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#countingAmountSale" prefHeight="199.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.application.Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#619cd7" height="21.0" stroke="#0292ff" strokeType="INSIDE" width="385.0" />
+      <Line endX="-374.0" endY="-94.0" layoutX="375.0" layoutY="97.0" startX="-374.5" startY="101.0" stroke="#619cd7" strokeWidth="5.0" />
+      <Line endX="-374.0" endY="-94.0" layoutX="758.0" layoutY="98.0" startX="-374.0" startY="97.5" stroke="#619cd7" strokeWidth="5.0" />
+      <Line endX="7.0" endY="269.0" layoutX="377.0" layoutY="-71.0" startX="-374.0" startY="269.0" stroke="#619cd7" strokeWidth="5.0" />
+      <Rectangle fx:id="statusQuantitySale" arcHeight="5.0" arcWidth="5.0" fill="#c3ddf5" height="28.0" layoutX="102.0" layoutY="78.0" smooth="false" stroke="#e6f3ff" strokeLineCap="ROUND" strokeType="OUTSIDE" width="47.0" />
+      <Label layoutX="21.0" layoutY="45.0" text="Код товара:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="82.0" text="Количество:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="120.0" text="Сумма:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="addQuantityOfSale" layoutX="103.0" layoutY="79.0" onKeyReleased="#returnStatusQuantitySale" prefHeight="25.0" prefWidth="45.0" />
+      <TextField fx:id="addAmountOfSale" editable="false" layoutX="103.0" layoutY="117.0" prefHeight="25.0" prefWidth="97.0" />
+      <ChoiceBox fx:id="codeAddProductOfSale" layoutX="103.0" layoutY="42.0" prefHeight="25.0" prefWidth="172.0" />
+      <Label layoutX="14.0" layoutY="12.0" style="-fx-background-color: #619cd7;" text="Добавление нового состава продажи" textFill="#464646">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="closeAdding" layoutX="28.0" layoutY="154.0" mnemonicParsing="false" onAction="#closeAddingOfSale" prefHeight="27.0" prefWidth="64.0" text="Назад" />
+      <Button layoutX="283.0" layoutY="155.0" mnemonicParsing="false" onAction="#addingObjectOfSale" text="Добавить" />
+   </children>
+</Pane>

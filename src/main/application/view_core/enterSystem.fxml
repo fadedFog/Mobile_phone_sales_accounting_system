@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.application.Controller">
+   <children>
+      <Button layoutX="448.0" layoutY="341.0" mnemonicParsing="false" onAction="#openPasswordScreen" prefHeight="42.0" prefWidth="100.0" text="Войти">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button disable="true" layoutX="51.0" layoutY="341.0" mnemonicParsing="false" opacity="0.0" prefHeight="42.0" prefWidth="55.0" text="DB">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="37.0" layoutY="53.0" prefHeight="130.0" prefWidth="386.0" text="Добро Пожаловать в систему учета продаж сотовых телефонов в магазине!" wrapText="true">
+         <font>
+            <Font name="System Italic" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonClose" layoutX="552.0" layoutY="23.0" mnemonicParsing="false" onAction="#closeSimpleWindow" onMouseEntered="#changeColorButtonToRed" onMouseExited="#changeColorButtonToGray" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #CDC9C9;" text="х" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7cdd79" height="21.0" layoutX="-10.0" layoutY="-10.0" stroke="#25e403" strokeType="INSIDE" width="610.0" />
+      <Label layoutX="23.0" layoutY="6.0" style="-fx-background-color: #7cdd79;" text="Вход в систему" textFill="#5e5e5e">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
